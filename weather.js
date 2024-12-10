@@ -10,7 +10,7 @@ async function getWeather() {
   }
 
   // Build the API URL string for fetching weather data
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   try {
     // Fetch the weather data from the API
@@ -44,7 +44,7 @@ function displayWeather(data) {
   // Display the weather data in the weatherDiv element
   weatherDiv.innerHTML = `
         <h2>Weather in ${cityName}</h2>
-        <p><strong>Temperature:</strong> ${temperature} °C</p>
+        <p><strong>Temperature:</strong> ${temperature} °F</p>
         <p><strong>Condition:</strong> ${description}</p>
         <p><strong>Humidity:</strong> ${humidity}%</p>
         <p><strong>Wind Speed:</strong> ${windSpeed} m/s</p>
